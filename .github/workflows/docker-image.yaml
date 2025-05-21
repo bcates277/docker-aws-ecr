@@ -41,20 +41,20 @@ jobs:
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }} .
       env:
         ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
-        ECR_REPOSITORY: repo-demo-day-1
+        ECR_REPOSITORY: demo-repo-2025
 
     - name: Tag Docker image with semantic version
       run: |
         docker tag $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }} $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }}
       env:
         ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
-        ECR_REPOSITORY: repo-demo-day-1
+        ECR_REPOSITORY: demo-repo-2025
 
     - name: Push Docker image to ECR
       run: |
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }}
       env:
         ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
-        ECR_REPOSITORY: repo-demo-day-1
+        ECR_REPOSITORY: demo-repo-2025
 
         
