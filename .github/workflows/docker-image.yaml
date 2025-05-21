@@ -57,5 +57,3 @@ jobs:
         ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
         ECR_REPOSITORY: repo-demo-day-1
 
-
-        
