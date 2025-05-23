@@ -9,7 +9,7 @@ Before getting started, ensure you have the following:
 - GitHub account: [Sign up for GitHub](https://github.com/signup)
 
 ## Running the Application locally
-1. Fork this repository 
+1. Fork this repository
 
 2. Once forked, go to your profile on GitHub, and clone the repository down to your local machine:
 
@@ -35,7 +35,7 @@ docker run -d --name docker-test-app -p 3000:3000 docker-manual-aws-ecr:1.0.0
 6. Access the application in your web browser at http://localhost:3000.
 
 ## Automating with GitHub Actions
-1. Configure AWS Credentials - To enable GitHub Actions to access AWS services such as ECR, we need to set up AWS credentials in GitHub as secrets. 
+1. Configure AWS Credentials - To enable GitHub Actions to access AWS services such as ECR, we need to set up AWS credentials in GitHub as secrets.
 
 2. Commit and Push Your Changes:
 ```bash
