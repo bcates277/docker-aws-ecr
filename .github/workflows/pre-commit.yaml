@@ -1,7 +1,7 @@
 # .github/workflows/pre-commit.yml
 name: Pre-Commit Checks
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   pre-commit:
