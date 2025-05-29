@@ -56,8 +56,14 @@ jobs:
         image-ref: ${{ steps.ecr-login.outputs.registry }}/demo-repo-2025:${{ steps.get-version.outputs.version }}
         format: json
         output: trivy-report.json
-        ignore-unfixed: true
+        ignore-unfixed: false
         vuln-type: os,library
+
+    - name: Upload Trivy scan report
+      uses: actions/upload-artifact@v3
+      with:
+        name: trivy-report
+        path: trivy-report.json
 
     - name: Push Docker image to ECR
       run: |
