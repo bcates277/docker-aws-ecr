@@ -43,6 +43,15 @@ jobs:
         ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
         ECR_REPOSITORY: demo-repo-2025
 
+            # Add this step to scan the image with Trivy
+    - name: Scan Docker image with Trivy
+      uses: aquasecurity/trivy-action@v0.16.0
+      with:
+        image-ref: ${{ steps.ecr-login.outputs.registry }}/demo-repo-2025:${{ steps.get-version.outputs.version }}
+        format: table
+        exit-code: 1
+        ignore-unfixed: true
+
     - name: Tag Docker image with semantic version
       run: |
         docker tag $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }} $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }}
