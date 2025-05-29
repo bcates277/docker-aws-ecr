@@ -59,12 +59,6 @@ jobs:
         ignore-unfixed: false
         vuln-type: os,library
 
-    - name: Upload Trivy scan report
-      uses: actions/upload-artifact@v3
-      with:
-        name: trivy-report
-        path: trivy-report.json
-
     - name: Push Docker image to ECR
       run: |
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }}
