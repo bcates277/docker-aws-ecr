@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gitleaks": "gitleaks detect --source . --no-git --redact --exit-code 1"
+
   },
   "keywords": [],
   "author": "",
@@ -14,5 +16,9 @@
   },
   "devDependencies": {
     "pre-commit": "^1.0.10"
-  }
+  },
+  "pre-commit": [
+    "gitleaks"
+  ]
 }
+
