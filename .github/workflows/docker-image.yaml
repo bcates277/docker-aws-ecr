@@ -66,3 +66,6 @@ jobs:
         ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
         ECR_REPOSITORY: demo-repo-2025
 
+
+
+        
