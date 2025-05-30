@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gitleaks": "gitleaks detect --source . --verbose --redact"
+    "gitleaks": "gitleaks git --pre-commit -v"
   },
   "keywords": [],
   "author": "",
