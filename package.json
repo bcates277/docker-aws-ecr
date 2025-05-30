@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gitleaks": "gitleaks git --log-level=info --redact -v"
+    "gitleaks": "gitleaks git --staged -v --redact",
+    "gitleaks:full": "gitleaks git --log-level=info --redact -v"  
+
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
