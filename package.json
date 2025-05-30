@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gitleaks": "gitleaks git -v",
-    "gitleaks": "gitleaks stdin -v"
-
+    "gitleaks": "gitleaks git --log-opts='-1'"
   },
   "keywords": [],
   "author": "",
