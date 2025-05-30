@@ -1,0 +1,20 @@
+{
+  "name": "hitc-docker-cicd-ecr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gitleaks": "gitleaks git --staged"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "gitleaks"
+  ]
+}
+
